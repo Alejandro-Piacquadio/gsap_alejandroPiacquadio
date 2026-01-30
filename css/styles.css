@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+.intro {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    /* background-image: url(../img/bg1.jpg); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.lorem {
+    /* opacity: 0; */
+    color: black;
+    margin: 0;
+    font-size: 10em;
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dos {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.dos h1 {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    font-size: 10em;
+}
