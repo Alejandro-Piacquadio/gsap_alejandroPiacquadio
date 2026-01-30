@@ -36,7 +36,7 @@ introTl.eventCallback("onComplete", () => {
     })
 
     gsap.to(".intro", {
-        backgroundColor: "#222", // color gris oscuro
+        backgroundColor: "#222",
         scrollTrigger: {
             trigger: ".intro",
             start: "top top",
