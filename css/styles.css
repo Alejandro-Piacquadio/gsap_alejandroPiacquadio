@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 body.no-scroll {
@@ -39,10 +40,42 @@ body.no-scroll {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    position: relative;
 }
 
-.dos h1 {
-    color: rgb(255, 255, 255);
+/* .dos .rata {
+    width: 260px;
+    left: 0;
+    right: auto;
+    bottom: 0;
     opacity: 1;
-    font-size: 10em;
+    z-index: 2;
+} */
+
+.dos .lamp {
+  position: absolute;
+  left: 55%;
+  top: 62%;
+  width: 250px;
+  transform: translateX(-50%);
+  transform-origin: 50% 100%;
+  z-index: 3;
+  will-change: opacity, visibility;
+}
+.dos .edif1 {
+    width: 640px;
+    left: -127px;
+    position: absolute;
+    bottom: -40px;
+    will-change: opacity;
+    z-index: 1;
+}
+
+.dos .edif2 {
+    width: 671px;
+    right: -229px;
+    position: absolute;
+    bottom: -87px;
+    will-change: opacity;
+    z-index: 1;
 }

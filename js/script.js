@@ -60,20 +60,33 @@ introTl.eventCallback("onComplete", () => {
     ScrollTrigger.refresh();
 });
 
-//section 2 .dos
-let dosh1 = document.querySelector(".dos h1")
-
-gsap.from(dosh1, {
-    opacity: 0,
-    scale: 0,
-    ease: "none",
+const dosTl = gsap.timeline({
     scrollTrigger: {
         trigger: ".dos",
-        start: "top+=1 top",
-        end: "+=900",
-        scrub: true,
-        // pin: true,
-        markers: true,
-        invalidateOnRefresh: true
-    }
-})
+        start: "top top",
+        end: "+=1000",
+        scrub: 2,
+        pin: true,
+        pinSpacing: true,
+        invalidateOnRefresh: true,
+        markers: true
+    },
+    defaults: { ease: "none" }
+});
+
+// Estado inicial
+gsap.set([".edif1", ".edif2", ".lamp"], { autoAlpha: 0 });
+
+// Timeline
+dosTl
+    // Aparecen edificios (puedes escalonar con stagger si quieres)
+    .to([".edif1", ".edif2"], {
+        autoAlpha: 1,
+        duration: 0.8
+    }, 0)
+
+    // Luego aparece el hombre cuando los edificios ya están visibles
+    .to(".lamp", {
+        autoAlpha: 1,
+        duration: 0.6
+    }, ">");
